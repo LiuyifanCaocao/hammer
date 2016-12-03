@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/hammer.css"/>
+    <script src="js/jquery_1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <title></title>
+    <style>
+        #body {
+            /*设置3D视角，焦距*/
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-perspective: 2000px;
+            perspective: 2000px;
+        }
+
+        .banner {
+            width: 1200px;
+            margin: 20px auto;
+            transition: all .5s; /*设置动画完成时间	*/
+        }
+
+        .banner img {
+
+            margin-left: -2px;
+        }
+        .border {
+            /*设置盒子边框阴影效果*/
+            box-shadow: 15px 15px 30px #ccc, -15px 15px 30px #ccc, 15px -15px 30px #ccc, -15px -15px 30px #ccc;
+        }
+    </style>
+</head>
+<body class="background-color_ededed">
+<!--头-->
+<div id="header">
+    <div id="header_header" class="height_100px background-color_black margin_0_auto min-width_1250px width_100">
+        <div class="width_1220px height_100 margin_0_auto  display_flex align-items_center ">
+            <div>
+                <img src="img/hammer_logo.png" alt=""/>
+            </div>
+            <div class="display_flex width_660px height_100 align-items_center justify-content_space_around margin-left_290px ">
+                <a href="#" class="color_white" style="color: white">在线商城</a>
+                <a href="#">Smartisan M1/M1L</a>
+                <a href="#">Smartisan OS</a>
+                <a href="#">欢喜云</a>
+                <a href="#">应用下载</a>
+                <a href="#">官方论坛</a>
+            </div>
+            <div id="biaoTou">
+                <a href="#" style="color: #FFF">登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="display_flex align-items_center height_90px width_1220px  margin_0_auto display_flex justify-content_space-between  ">
+        <div id="biaoTou_footer"
+             class="display_flex align-items_center justify-content_space-between width_740px padding-left_20px ">
+            <a href="#" class="color_black" style="color: #45474b;">精选</a>
+            <a href="#">手机</a>
+            <a href="#">耳机 / 音箱</a>
+            <a href="#">背壳 / 保护套</a>
+            <a href="#">"情怀"背壳</a>
+            <a href="#">其他周边</a>
+            <a href="#">保修服务</a>
+            <a href="#">全部商品</a>
+        </div>
+        <div id="menu_container" class="display_flex align-items_center justify-content_space_around">
+            <img src="img/shopping.png" alt="" class="width_20px height_20px"/>
+            <pre>  购物车  </pre>
+            <div style="border-radius: 300px;background-color: #7e7f73;font-size: 15px;color: white;width: 20px;height: 20px;text-align: center;line-height: 20px;margin-right: 6px">
+                0
+            </div>
+            <div id="menu">
+                <img src="img/talk.png" alt=""/>
+
+                <div>
+                    <img src="img/shopping_big.png" alt=""
+                         style="width: 100px;height: 100px;margin-left: 106px;margin-top: 20px"/>
+
+                    <p style="height: 40px;width: 100%;text-align: center;line-height: 40px">您的购物车还未添加商品</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--身体-->
+<div id="body" class="margin-left_10px" >
+    <div id="to_move"
+         class="banner width_1220px height_500px margin_0_auto border_gainsboro border-radius_5px background-color_d4d5d7 banner overflow_hidden">
+        <img src="img/QQ20161106203141.png" alt="" class="width_1220px height_500px overflow_hidden"/>
+    </div>
+    <div class="width_1217px height_200px border-radius_5px background-color_white margin_0_auto margin-top_29px overflow_hidden">
+        <ul id="ul1">
+            <li class="demo4">
+                <img class="ng-isolate-scope"
+                     src="http://image.smartisanos.cn/resource/0a4d7a0be77591a86b9b2738948be310.jpg@0o_0l_610w_100q.src"
+                     style="margin-top: 0;opacity: 1;">
+            </li>
+            <li class="demo4">
+                <img class="ng-isolate-scope"
+                     src="http://image.smartisanos.cn/resource/9a96aa394404b57c5d13b69ace5ebfbf.jpg@0o_0l_610w_100q.src"
+                     style="margin-top: 0;opacity: 1;">
+            </li>
+            <li class="demo4">
+                <img class="ng-isolate-scope"
+                     src="http://image.smartisanos.cn/resource/9bc7edc9acc46c891d71d5e57b5ed551.jpg@0o_0l_610w_100q.src"
+                     style=";margin-top: 0;opacity: 1;">
+            </li>
+            <li style="border-right: 0;" class="demo4">
+                <img class="ng-isolate-scope"
+                     src="http://image.smartisanos.cn/resource/cfae73dd6f4435b93014edb0f2974e03.jpg@0o_0l_610w_100q.src"
+                     style="opacity: 1;margin-top: 0">
+            </li>
+        </ul>
+    </div>
+    <div class="width_1217px height_490px border-radius_5px background-color_white margin_0_auto margin-top_29px overflow_hidden">
+        <div class="width_1217px height_60px background-color_fafafa">
+            <p>热门商品</p>
+        </div>
+        <ul id="ul7">
+            <li>
+                <img alt=""
+                     src="http://img01.smartisanos.cn/D0/1000213/100021302/DD4E2EBB283C69CA3DE4789E06815C83/253X253@2x.jpg">
+                <h6>Smartisan M1L</h6>
+
+                <p class="ptitle">超高配置、超高效率</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: red"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: yellow"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: blue"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>3299.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt=""
+                     src="http://img01.smartisanos.cn/38/1000223/100022302/FF6E3D787C07983FA4C2C281C48E03C9/253X253@2x.jpg">
+                <h6>Smartisan M1/M1L 软胶保护套</h6>
+
+                <p class="ptitle">TPU环保材质、细腻防滑、防油污</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #ae1000"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #7b7b7b"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>49.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt=""
+                     src="http://img01.smartisanos.cn/4E/1000219/100021904/72E54A89C6027750E0A58512E7E03BA9/253X253@2x.jpg">
+                <h6>Smartisan 卫衣 皇帝的新装</h6>
+
+                <p class="ptitle">纪念安徒生出版第一部童话集</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #8f8f92"></div>
+                        </div>
+                    </li>
+
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>249.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li style="border-right: 0">
+                <img alt=""
+                     src="http://img01.smartisanos.cn/6F/1000222/100022201/5E4E40120D09FB6791F9430F914C6F68/253X253@2x.jpg">
+                <h6>《深泽直人》</h6>
+
+                <p class="ptitle">首次面向中国读者介绍其作品</p>
+                <ul>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>199.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+        </ul>
+    </div>
+    <div class="width_1217px height_920px border-radius_5px background-color_white margin_0_auto margin-top_29px overflow_hidden">
+        <div class="width_1217px height_60px background-color_fafafa">
+            <p>官方精选</p>
+        </div>
+        <ul id="ul2">
+            <li style="width: 607.6px;padding: 0" class="demo4">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://image.smartisanos.cn/resource/5d24f98818458de69e63105d528ef0f7.jpg@0o_0l_1220w_100q.src"
+                     style="opacity: 1; width: 100%;height: 100%;margin-top: 0">
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/15/1000145/100014501/5F487D0EAE9648384348F13A9F4CDC09/253X253@2x.jpg"
+                     style="opacity: 1;">
+                <h6>Smartisan T2 </h6>
+
+                <p class="ptitle">全金属中框、正反面 2.5D 玻璃面板、全网通</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #5b615e"></div>
+                        </div>
+                    </li>
+
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>1999.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li style="border-right: 0">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/A2/1000224/100022401/C0006780EB1D1332ECA24CD838B38061/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>Smartisan 原装数据线 1 m</h6>
+
+                <p class="ptitle">Type-C 接口、3A 大电流充电、夜间微光灯</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #ceced2"></div>
+                        </div>
+                    </li>
+
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>49.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/02/1000135/100013552/45BD03DCFEF62B3F42D1636E18E78A80/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>Smartisan T恤 男款</h6>
+
+                <p class="ptitle">100% 进口 SUPIMA 棉、刷毛工艺处理</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #303b6b"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #ffffff"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #481019"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #8c9035"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #5c3529"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #45ac42"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #a69857"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #655316"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>99.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/47/100013408/80EEDA8320D9DA4A4C218EEA79BF77C2/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>Smartisan T恤 女款</h6>
+
+                <p class="ptitle">100% 进口 SUPIMA 棉、刷毛工艺处理</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #303b6b"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #ffffff"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #8c9035"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #481019"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #5c3529"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #45ac42"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #a69857"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #655316"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>99.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/BF/1000218/100021808/A8A1F6ADD9F2385153B0FC5B3B71F58E/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>Smartisan 卫衣 老友记</h6>
+
+                <p class="ptitle">纪念老友记首播</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #2a173f"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>249.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li style="border-right: 0">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/16/1000136/100013612/8CBCB63F275794C8EBBD5A3ED013B0BF/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>Smartisan S-1000 耳机</h6>
+
+                <p class="ptitle">VSONIC 创始人全程参与调音</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #1e1d4d"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #832d3a"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #898e94"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>199.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+        </ul>
+    </div>
+    <div class="width_1217px height_920px border-radius_5px background-color_white margin_0_auto margin-top_29px overflow_hidden">
+        <div class="width_1217px height_60px background-color_fafafa">
+            <p>品牌精选</p>
+        </div>
+        <ul id="ul3">
+            <li style="width: 607.6px;padding: 0" class="demo4">
+                <img class="ng-isolate-scope"
+                     src="http://image.smartisanos.cn/resource/1df9b0dd3d160f50c14907b7f62f2726.jpg@0o_0l_1220w_100q.src"
+                     style="opacity: 1;width: 100%;height: 100%;margin-top: 0">
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/AD/1000009/100000902/958DB00A5955EDEA9720F97E01E7BEAD/253X253@2x.jpg"
+                     style="opacity: 1; ">
+                <h6>JBL E10 入耳式线控耳机</h6>
+
+                <p class="ptitle">全面支持安卓手机、低音澎湃震撼</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #502533"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #ff1a2c"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: blue"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #3cac2a"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #9f999b"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>199.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li style="border-right: 0">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/FE/100016701/E6B1B449D3AAF592866570A5F8E2BEDB/1463387365/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>FUNIPICA F-515 手机外置镜头</h6>
+
+                <p class="ptitle">0.36x 大广角、15x 微距、铝合金外壳</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #11165d"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #d6d3dc"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #000001"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>89.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/CB/1000097/100009703/4F5E2EDA63BF9F98472AD2B4DD1CF26C/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>捷波朗 REVO 混音器头戴式耳机</h6>
+
+                <p class="ptitle">90° 镀金耳机插头、塑化钛Grilamid TR90 头梁</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #d8dbe3"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #101046"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #113719"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>399.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/B5/1000015/100001505/83670B52B6B7A037873D7A0177909C77/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>JBL T200A 入耳式耳机</h6>
+
+                <p class="ptitle">高级驱动单元、全音频设备兼容、人体工程学耳套</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #4140ff"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #faefff"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #ffff30"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>129.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li>
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/87/1000011/100001103/D8EF7AB79E9A12AAAC4CF2FDF58C81A1/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>JBL E30 头戴式耳机</h6>
+
+                <p class="ptitle">40mm 驱动器、Pure Bass性能、人体工学设计头箍</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #3f0b37"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #c00a1e"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #000084"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: #cdcedc"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>499.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+            <li style="border-right: 0">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/F2/100019501/88FC73CFBFD0CB4705E85A607F446BF6/1463137964/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;">
+                <h6>Misfit Shine2 智能运动手环</h6>
+
+                <p class="ptitle">自动睡眠追踪、模拟来电、50 米防水</p>
+                <ul>
+                    <li>
+                        <div>
+                            <div style="background-color: #8e288f"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div style="background-color: yellow"></div>
+                        </div>
+                    </li>
+                </ul>
+                <p class="pMoney">
+                    <i>￥</i>
+                    <span>699.00</span>
+                </p>
+                <a class="aaa" href="#">查看详情</a>
+            </li>
+        </ul>
+    </div>
+    <div class="width_1217px height_261px border-radius_5px background-color_white margin_0_auto margin-top_29px overflow_hidden">
+        <div class="width_1217px height_60px background-color_fafafa">
+            <p>锤子科技动态</p>
+        </div>
+        <ul id="ul4">
+            <li style="padding: 0" class="demo4">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://img01.smartisanos.cn/F2/100019501/88FC73CFBFD0CB4705E85A607F446BF6/1463137964/253X253@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;margin-top: 0">
+            </li>
+            <li style="padding: 0" class="demo4">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://static.smartisanos.cn/index/img/technology/technology-m1-coffee_0849cd2f35@2x.jpg"
+                     style="opacity: 1;margin-top: 0">
+            </li>
+            <li style="padding: 0" class="demo4">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://static.smartisanos.cn/index/img/technology/technology-onestep_1f293d24c4@2x.jpg"
+                     style="opacity: 1;margin-top: 0">
+            </li>
+            <li style="border-right: 0;padding: 0" class="demo4">
+                <img alt="" class="ng-isolate-scope"
+                     src="http://static.smartisanos.cn/index/img/technology/technology-game_ce1322b951@2x.jpg"
+                     style="opacity: 1;margin-top: 0">
+            </li>
+        </ul>
+    </div>
+    <div class="width_1217px height_421px border-radius_5px background-color_white margin_0_auto margin-top_29px overflow_hidden">
+        <div class="width_1217px height_60px background-color_fafafa">
+            <p>Smartisan App</p>
+        </div>
+        <ul id="ul5">
+            <li>
+                <div class="icon" style="background-position-x: -96px;"></div>
+                <h6>锤子桌面</h6>
+
+                <p class="ptitle" style="margin-top: 24px">它示范了何为“美观、易用和人性化”</p>
+                <img style="margin-top: 0" src="img/QQ20161106205522.png" alt=""/>
+
+                <div class="icon_img" style="margin-top: 49px">
+                    <div style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAZ0lEQVR4Ab2PRwEDMQwEBSaXIxHKQiEDWQSpf/dufdJn3a1KFQg2MG5BHE5CK9hxgSu6YNcGDIcTXFlZG9zgBj3oBSCQsLpZ9T1QrtogrH8zEBhtUN8r2kA3OxkY0hS/sr9lUIqai/N2k+y6Lnw6TAAAAABJRU5ErkJggg==)"></div>
+                </div>
+            </li>
+            <li>
+                <div class="icon" style="background-position-x: 0px;"></div>
+                <h6>HandShaker</h6>
+
+                <p class="ptitle" style="margin-top: 24px">在 Mac 和 Windows 电脑上也可以方便自如地</p>
+
+                <p class="ptitle">管理你在 Android 手机中的内容</p>
+                <img style="margin-top: 0" src="img/QQ20161106205522.png" alt=""/>
+
+                <div class="icon_img">
+                    <div style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAXklEQVR4AWOgNnjA/8D2QeKD9gdrH1x88BUhnP6gGyh04cGhBwUP/iMgXAFc6ALtFCyAwqYHbkASDgkqoKsjCx9MfbDjwe0Hp9EVYAa10APnBxnAcF3/4PKD79SJPgC8y+Fmo46kggAAAABJRU5ErkJggg==) "></div>
+                    <div style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAmUlEQVR4AWMgGTzgfzD7wUR8CrY8+P8gHre0GlB6+QNmTAmuB2UPNj3oexD5IPNBwYO1DxY8sEOWFnhwCagTFf594I9QMA0ujICrH7AgFDzFokAN2Yq/WBSwIyt4gakA1ZGbsCi48EAUoSAOKIAJzyMUsD24j0VBPLIlrg/+oElve8CIGpYRD14+uPOgHRyOXx5sfMBPZOwCAHVg3sh2l3OaAAAAAElFTkSuQmCC)"></div>
+                </div>
+
+            </li>
+            <li>
+                <div class="icon" style="background-position-x: -288px;"></div>
+                <h6>锤子阅读</h6>
+
+                <p class="ptitle" style="margin-top: 24px">信息过载年代的干净阅读</p>
+                <img style="margin-top: 0" src="img/QQ20161106205522.png" alt=""/>
+
+                <div class="icon_img" style="margin-top: 49px">
+                    <div style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAZ0lEQVR4Ab2PRwEDMQwEBSaXIxHKQiEDWQSpf/dufdJn3a1KFQg2MG5BHE5CK9hxgSu6YNcGDIcTXFlZG9zgBj3oBSCQsLpZ9T1QrtogrH8zEBhtUN8r2kA3OxkY0hS/sr9lUIqai/N2k+y6Lnw6TAAAAABJRU5ErkJggg==)"></div>
+                    <div style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAmUlEQVR4AWMgGTzgfzD7wUR8CrY8+P8gHre0GlB6+QNmTAmuB2UPNj3oexD5IPNBwYO1DxY8sEOWFnhwCagTFf594I9QMA0ujICrH7AgFDzFokAN2Yq/WBSwIyt4gakA1ZGbsCi48EAUoSAOKIAJzyMUsD24j0VBPLIlrg/+oElve8CIGpYRD14+uPOgHRyOXx5sfMBPZOwCAHVg3sh2l3OaAAAAAElFTkSuQmCC)"></div>
+                </div>
+            </li>
+            <li style="border-right: 0">
+                <div class="icon" style="background-position-x: -192px;"></div>
+                <h6>锤子便签</h6>
+
+                <p class="ptitle" style="margin-top: 24px">雅致的信纸、精心调整的文字排版</p>
+
+                <p class="ptitle">这可能是最让人想写字的便签应用</p>
+                <img style="margin-top: 0" src="img/QQ20161106205522.png" alt=""/>
+
+                <div class="icon_img">
+                    <div style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAZ0lEQVR4Ab2PRwEDMQwEBSaXIxHKQiEDWQSpf/dufdJn3a1KFQg2MG5BHE5CK9hxgSu6YNcGDIcTXFlZG9zgBj3oBSCQsLpZ9T1QrtogrH8zEBhtUN8r2kA3OxkY0hS/sr9lUIqai/N2k+y6Lnw6TAAAAABJRU5ErkJggg==)"></div>
+                    <div style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAAmUlEQVR4AWMgGTzgfzD7wUR8CrY8+P8gHre0GlB6+QNmTAmuB2UPNj3oexD5IPNBwYO1DxY8sEOWFnhwCagTFf594I9QMA0ujICrH7AgFDzFokAN2Yq/WBSwIyt4gakA1ZGbsCi48EAUoSAOKIAJzyMUsD24j0VBPLIlrg/+oElve8CIGpYRD14+uPOgHRyOXx5sfMBPZOwCAHVg3sh2l3OaAAAAAElFTkSuQmCC)"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="width_1217px height_421px border-radius_5px background-color_white margin_0_auto margin-top_29px overflow_hidden">
+        <div class="width_1217px height_60px background-color_fafafa">
+            <p>论坛精选</p>
+        </div>
+        <ul id="ul6">
+            <li class="padding-top_0">
+                <img alt="" class="image ng-isolate-scope"
+                     src="http://static.smartisanos.cn/index/img/store/forum-1_ed854d16a6@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;margin-top: 30px">
+                <h5>锤子科技 2016 全国线下聚会直播活动集结汇</h5>
+
+                <p class="pTitle2">非常想看发布会，又没时间去现场，可以来看看这个线下聚会的集合贴，也许某一场锤友自发组织的线下聚会正在你身边发生。</p>
+                <a href="#" class="a_toMore">阅读全文 ></a>
+            </li>
+            <li class="padding-top_0">
+                <img alt="" class="image ng-isolate-scope"
+                     src="http://static.smartisanos.cn/index/img/store/forum-2_6aa871ced9@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;margin-top: 30px">
+                <h5>锤子科技新品手机试用预告</h5>
+
+                <p class="pTitle2">二龙哥准备从龙哥那“借”几台新手机拿来给大家试用玩，如果试用帖认真写还能得到新品手机，耳机等丰富奖品，等你来~<</p>
+                <a href="#" class="a_toMore">阅读全文 ></a>
+
+            </li>
+            <li class="padding-top_0">
+                <img alt="" class="image ng-isolate-scope"
+                     src="http://static.smartisanos.cn/index/img/store/forum-3_52c0d264a0@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;margin-top: 30px">
+                <h5>Smartisan OS 用户体验报告――我也爱这个世界</h5>
+
+                <p class="pTitle2">这是一份用户亲身体验 Smartisan OS 后完成的报告，写的非常有趣，推荐阅读。</p>
+                <a href="#" class="a_toMore">阅读全文 ></a>
+
+            </li>
+            <li class="padding-top_0" style="border-right: 0;">
+                <img alt="" class="image ng-isolate-scope"
+                     src="http://static.smartisanos.cn/index/img/store/forum-4_8b576fc2d6@2x.jpg"
+                     style="opacity: 1; transition: opacity 0.5s;margin-top: 30px">
+                <h5>锤子科技改变了哪些行业规则、风气和玩法？</h5>
+
+                <p class="pTitle2">手机行业有哪些行业规则、风气和玩法？锤子科技改变了哪些行业规则、风气和玩法？</p>
+                <a href="#" class="a_toMore">阅读全文 ></a>
+
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--尾-->
+<div id="footer" class="height_350px width_100  background-color_fafafa min-width_1250px " style="margin-top: 60px;">
+    <div class="height_100 width_1220px margin_0_auto  ">
+        <div class=" height_100px display_flex width_1220px" style="padding-top: 100px;padding-bottom: 32px;padding-left: 20px;">
+            <ul id="attention" class="display_flex flex-wrap_wrap justify-content_space-between width_920px">
+                <li><a href="http://www.smartisan.com/support/#/about" class="color_646464" style="color: #646464;font-weight: 400">订单服务</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about" class="color_646464" style="color: #646464;font-weight: 400">服务支持</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about" class="color_646464" style="color: #646464;font-weight: 400">自助服务</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about" class="color_646464" style="color: #646464;font-weight: 400">媒体中心</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about" class="color_646464" style="color: #646464;font-weight: 400">关于公司</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about" class="color_646464" style="color: #646464;font-weight: 400">关注我们</a></li>
+
+                <li style="margin-top: 10px"><a href="http://www.smartisan.com/support/#/about">购买指南</a></li>
+                <li style="margin-top: 10px"><a href="http://www.smartisan.com/support/#/about">售后服务</a></li>
+                <li style="margin-top: 10px"><a href="http://www.smartisan.com/support/#/about">热点资讯</a></li>
+                <li style="margin-top: 10px"><a href="http://www.smartisan.com/support/#/about">新闻动态</a></li>
+                <li style="margin-top: 10px"><a href="http://www.smartisan.com/support/#/about">公司简介</a></li>
+                <li style="margin-top: 10px"><a href="http://www.smartisan.com/support/#/about">新浪微博</a></li>
+
+                <li><a href="http://www.smartisan.com/support/#/about">支付方式</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">维修门店</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">预约购买</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">官方视频</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">加入我们</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">官方微信</a></li>
+
+                <li><a href="http://www.smartisan.com/support/#/about">送货政策</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">零售门店</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">订单物流</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">图片资源</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">联系我们</a></li>
+                <li><a href="http://www.smartisan.com/support/#/about">官方贴吧</a></li>
+
+
+            </ul>
+            <ul style="width: 271px;height: 96px;" class="display_flex flex-direction_colum ">
+                <li style="font-size: 30px;line-height: 1;text-align: right;width: 271px;height: 30px">
+                    <a href="#" style="cursor: default;color: #646464;">400-619-0909</a>
+                </li>
+                <li style="text-align: right;width: 271px;height: 18px">
+                    <p style="width: 271px;font-size: 12px;line-height: 18px;font-weight: 200;color: #c3c3c3;margin-top: 5px">
+                        周一至周日 9:00-18:00（仅收市话费）</p>
+                </li>
+            </ul>
+        </div>
+        <div class="width_1220px height_120px border-top_gainsboro">
+            <h4 style="margin-top: 25px;height: 15px;line-height: 15px;color: #757575;font-weight: 300;padding-left: 20px;">Copyright ©
+                ,2016 Smartisan Digital Co., Ltd. All Rights Reserved.北京锤子数码科技有限公司</h4>
+            <pre style="height: 12px;font-weight: 300;line-height: 1;color: #bdbdbd;margin-top: 5px;padding-left: 20px;">京ICP备14041720号-1  京ICP证140622号  京公网安备11010502025474</pre>
+        </div>
+    </div>
+
+</div>
+<div id="book">
+    <div id="page1" class="d3"></div>
+    <div id="page2" class="d3"></div>
+    <div id="page3" class="d3 text-align_center">
+        <a id="to_top" href="#header_header" class="height_80px width_70px" style="line-height: 80px;display: block">
+            刘逸凡
+        </a>
+    </div>
+    <div id="page4" class="d3"></div>
+    <div id="page5" class="d3"></div>
+    <div id="page6" class="d3"></div>
+</div>
+</body>
+<script>
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        /*var book = $("#book");
+        book.on("mousedown",function(){
+            $(this).css({"-webkit-perspective":"20px"});
+        });*/
+
+        var banner = $(".banner");
+//			鼠标进入
+        banner.on("mouseover", function () {
+//				加边框阴影
+          //  $(this).addClass("border");
+//				获取图片中心坐标
+            var disX = $(this).outerWidth() / 2 + $(this).offset().left;
+            var disY = $(this).outerHeight() / 2 + $(this).offset().top;
+            $(this).on("mousemove", function (ev) {
+//					鼠标移动,获取鼠标位置距中心点的距离
+                //  var ev = event||window.event;
+                var X = ev.clientX - disX;
+                var Y = 0.8 * ev.clientY - disY;
+//					定义距离与角度的关系   10和20是我自己看着合适写的
+                xdeg = parseInt(3 * (X / banner.outerWidth()));
+                ydeg = -parseInt(3 * (Y / banner.outerHeight()));
+
+
+                var xshadow = -20*xdeg;
+                var yshadow = 20*ydeg-10;
+             //   if(yshadow<0) {yshadow*=800}
+             //   if(xshadow<5) {xshadow=5}
+                $(this).css({
+                    "transform": "rotatex(" + ydeg + "deg) rotatey(" + xdeg + "deg)",
+                    "box-shadow": ""+xshadow+"px "+yshadow+"px 40px #ccc"
+                   // "border": "15px 15px 30px #ccc",
+                  //  "border-width": "10px"
+                });
+                //  $(this).css({"border":"15px 15px 30px #ccc,-15px 15px 30px #ccc,15px -15px 30px #ccc,-15px -15px 30px #ccc;"})
+            });
+        });
+//			鼠标离开banner图,解除鼠标移动事件，移除border样式，图片恢复原始角度
+        banner.on("mouseleave", function () {
+            $(".banner").off("mousemove");
+            // $(this).removeClass("border");
+            $(this).css({"transform": "rotatex(0) rotatey(0)",
+                "box-shadow": "none"
+            })
+        })
+    })
+</script>
+</html>
